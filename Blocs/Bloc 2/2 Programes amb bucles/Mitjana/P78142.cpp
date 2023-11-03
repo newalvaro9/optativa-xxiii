@@ -11,5 +11,6 @@ int main()
         total += number;
         ++numbers;
     }
+
     std::cout << std::fixed << std::setprecision(2) << total / numbers << std::endl;
 }
