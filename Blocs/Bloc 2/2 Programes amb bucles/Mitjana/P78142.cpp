@@ -8,13 +8,13 @@ int main()
 
     while (std::cin >> number)
     {
-
-        if (std::cin.peek() == '\n')
-        {
-            std::cin.clear(std::ios::eofbit); // https://stackoverflow.com/a/69111956/16268938
-        }
         total += number;
         ++numbers;
+
+        if (std::cin.get() == '\n')
+        {
+            break;
+        }
     }
 
     std::cout << std::fixed << std::setprecision(2) << total / numbers << std::endl;
